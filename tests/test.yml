@@ -1,0 +1,7 @@
+# test file for mariadb-client
+---
+- hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - ../../

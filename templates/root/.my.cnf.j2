@@ -1,0 +1,23 @@
+# {{ ansible_managed }}
+
+[client]
+host = {{ item.login_host | default('localhost') }}
+port = {{ item.login_port | default(3306) }}
+user = {{ item.login_user | default(item.owner) }}
+password = '{{ item.login_password }}'
+
+{% if item.ssl is defined %}
+ssl = {{ 1 if item.ssl else 0 }}
+{% endif %}
+
+{% if percona_client_ssl_map %}
+{% if percona_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] is defined %}
+ssl_ca = {{ percona_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] }}
+{% endif %}
+{% if percona_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] is defined %}
+ssl_cert = {{ percona_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] }}
+{% endif %}
+{% if percona_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] is defined %}
+ssl_key = {{ percona_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] }}
+{% endif %}
+{% endif %}

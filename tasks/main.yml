@@ -1,0 +1,13 @@
+# tasks file for mariadb-client
+---
+- include: install.yml
+  tags:
+    - configuration
+    - mariadb-client
+    - mariadb-client-install
+
+- include: configure.yml
+  tags:
+    - configuration
+    - mariadb-client
+    - mariadb-client-configure

@@ -1,0 +1,5 @@
+# defaults file for mariadb-client
+---
+percona_client_install: []
+percona_client_my_cnf_files: []
+percona_client_ssl_map: {}
