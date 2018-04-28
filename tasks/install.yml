@@ -4,7 +4,9 @@
   apt:
     name: "{{ item }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ percona_client_dependencies }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: "{{ mariadb_client_dependencies }}"
   tags:
     - mariadb-client-install-dependencies
 
@@ -12,6 +14,6 @@
   apt:
     name: "{{ item }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ percona_client_install }}"
+  with_items: "{{ mariadb_client_install }}"
   tags:
     - mariadb-client-install-additional

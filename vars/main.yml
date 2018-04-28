@@ -1,4 +1,4 @@
 # vars file for mariadb-client
 ---
-percona_client_dependencies:
+mariadb_client_dependencies:
   - mariadb-client
