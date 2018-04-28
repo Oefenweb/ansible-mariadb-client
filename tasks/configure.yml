@@ -7,7 +7,7 @@
     owner: "{{ item.value.owner | default('root') }}"
     group: "{{ item.value.group | default('mysql') }}"
     mode: "{{ item.value.mode | default('0640') }}"
-  with_dict: "{{ percona_client_ssl_map }}"
+  with_dict: "{{ mariadb_client_ssl_map }}"
   tags:
     - mariadb-client-configure-copy-certificate-files
 
@@ -18,6 +18,6 @@
     owner: "{{ item.owner }}"
     group: "{{ item.group | default(item.owner) }}"
     mode: "{{ item.mode | default('0600') }}"
-  with_items: "{{ percona_client_my_cnf_files }}"
+  with_items: "{{ mariadb_client_my_cnf_files }}"
   tags:
     - mariadb-client-configure-user-my-cnf

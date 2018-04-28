@@ -4,7 +4,7 @@
   apt:
     name: "{{ item }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ percona_client_dependencies }}"
+  with_items: "{{ mariadb_client_dependencies }}"
   tags:
     - mariadb-client-install-dependencies
 
@@ -12,6 +12,6 @@
   apt:
     name: "{{ item }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ percona_client_install }}"
+  with_items: "{{ mariadb_client_install }}"
   tags:
     - mariadb-client-install-additional

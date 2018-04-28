@@ -10,14 +10,14 @@ password = '{{ item.login_password }}'
 ssl = {{ 1 if item.ssl else 0 }}
 {% endif %}
 
-{% if percona_client_ssl_map %}
-{% if percona_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] is defined %}
-ssl_ca = {{ percona_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] }}
+{% if mariadb_client_ssl_map %}
+{% if mariadb_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] is defined %}
+ssl_ca = {{ mariadb_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] }}
 {% endif %}
-{% if percona_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] is defined %}
-ssl_cert = {{ percona_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] }}
+{% if mariadb_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] is defined %}
+ssl_cert = {{ mariadb_client_ssl_map[ item.ssl_cert | default('client-cert') ]['dest'] }}
 {% endif %}
-{% if percona_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] is defined %}
-ssl_key = {{ percona_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] }}
+{% if mariadb_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] is defined %}
+ssl_key = {{ mariadb_client_ssl_map[ item.ssl_key | default('client-key') ]['dest'] }}
 {% endif %}
 {% endif %}
