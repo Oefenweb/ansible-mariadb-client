@@ -1,6 +1,6 @@
 ## mariadb-client 
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-mariadb-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-mariadb-client) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-mariadb--client-blue.svg)](https://galaxy.ansible.com/tersmitten/mariadb-client)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-mariadb-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-mariadb-client) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-mariadb--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/mariadb-client)
 
 Set up a [mariadb-server](https://mariadb.com/products/technology/server) client in Debian-like systems.
 
