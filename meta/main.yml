@@ -1,6 +1,7 @@
 # meta file for mariadb-client
 ---
 galaxy_info:
+  role_name: mariadb-client
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up mariadb-server client in Debian-like systems
