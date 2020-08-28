@@ -1,6 +1,7 @@
-## mariadb-client 
+## mariadb-client
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-mariadb-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-mariadb-client) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-mariadb--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/mariadb-client)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-mariadb-client.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-mariadb-client)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-mariadb--client-blue.svg)](https://galaxy.ansible.com/Oefenweb/mariadb-client)
 
 Set up a [mariadb-server](https://mariadb.com/products/technology/server) client in Debian-like systems.
 
@@ -22,7 +23,8 @@ None
 * `mariadb_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
 * `mariadb_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
 
-* `mariadb_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection
+* `mariadb_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection (deprecated)
+* `mariadb_client_my_cnf_files.{n}.ssl_mode`: [optional]: Specifies the desired security state of the connection to the server (e.g. `VERIFY_CA`)
 
 * `mariadb_client_my_cnf_files.{n}.ssl_ca`: [optional, default: `ca-cert`]: The identifier of the ca certificate file in ssl map
 * `mariadb_client_my_cnf_files.{n}.ssl_cert`: [optional, default: `client-cert`]: The identifier of the ssl certificate file in ssl map

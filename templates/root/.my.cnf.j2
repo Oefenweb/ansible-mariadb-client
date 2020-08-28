@@ -9,6 +9,9 @@ password = '{{ item.login_password }}'
 {% if item.ssl is defined %}
 ssl = {{ 1 if item.ssl else 0 }}
 {% endif %}
+{% if item.ssl_mode is defined %}
+ssl_mode = {{ item.ssl_mode }}
+{% endif %}
 
 {% if mariadb_client_ssl_map %}
 {% if mariadb_client_ssl_map[ item.ssl_ca | default('ca-cert') ]['dest'] is defined %}

@@ -2,18 +2,16 @@
 ---
 - name: install | dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ mariadb_client_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ mariadb_client_dependencies }}"
   tags:
     - mariadb-client-install-dependencies
 
 - name: install | additional
   apt:
-    name: "{{ item }}"
+    name: "{{ mariadb_client_install }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ mariadb_client_install }}"
   tags:
     - mariadb-client-install-additional
