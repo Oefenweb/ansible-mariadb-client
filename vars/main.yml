@@ -1,4 +1,4 @@
-# vars file for mariadb-client
+# vars file
 ---
 mariadb_client_dependencies:
   - mariadb-client

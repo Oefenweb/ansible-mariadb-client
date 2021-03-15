@@ -1,4 +1,4 @@
-# defaults file for mariadb-client
+# defaults file
 ---
 mariadb_client_install: []
 mariadb_client_my_cnf_files: []

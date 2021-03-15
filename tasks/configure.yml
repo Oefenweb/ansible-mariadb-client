@@ -1,4 +1,4 @@
-# tasks file for mariadb-client
+# tasks file
 ---
 - name: configure | copy certificate files
   copy:
