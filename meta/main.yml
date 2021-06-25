@@ -2,7 +2,7 @@
 ---
 galaxy_info:
   namespace: oefenweb
-  role_name: mariadb-client
+  role_name: mariadb_client
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up mariadb-server client in Debian-like systems
@@ -11,9 +11,9 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - trusty
         - xenial
         - bionic
+        - focal
     - name: Debian
       versions:
         - jessie
