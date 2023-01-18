@@ -68,7 +68,7 @@ None
     mariadb_client_my_cnf_files:
       - dest: '~root/.my.cnf'
         owner: root
-        group: root
+        ansible.builtin.group: root
         mode: '0600'
         login_host: localhost
         login_port: 3306

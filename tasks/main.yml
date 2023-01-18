@@ -1,12 +1,14 @@
 # tasks file
 ---
-- include: install.yml
+- name: install
+  ansible.builtin.import_tasks: install.yml
   tags:
     - configuration
     - mariadb-client
     - mariadb-client-install
 
-- include: configure.yml
+- name: configure
+  ansible.builtin.import_tasks: configure.yml
   tags:
     - configuration
     - mariadb-client

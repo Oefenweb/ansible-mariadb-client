@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: configure | copy certificate files
-  copy:
+  ansible.builtin.copy:
     src: "{{ item.value.src }}"
     dest: "{{ item.value.dest }}"
     owner: "{{ item.value.owner | default('root') }}"
@@ -12,7 +12,7 @@
     - mariadb-client-configure-copy-certificate-files
 
 - name: configure | update (user) configuration file(s)
-  template:
+  ansible.builtin.template:
     src: root/.my.cnf.j2
     dest: "{{ item.dest | default('~' + item.owner + '/.my.cnf') }}"
     owner: "{{ item.owner }}"
