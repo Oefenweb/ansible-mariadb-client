@@ -54,7 +54,7 @@ None
 ---
 - hosts: all
   roles:
-    - mariadb-client
+    - oefenweb.mariadb-client
 ```
 
 ##### With .my.cnf file(s)
@@ -63,7 +63,7 @@ None
 ---
 - hosts: all
   roles:
-    - mariadb-client
+    - oefenweb.mariadb-client
   vars:
     mariadb_client_my_cnf_files:
       - dest: '~root/.my.cnf'
