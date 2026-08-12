@@ -1,4 +1,4 @@
-# {{ ansible_managed }}
+{{ ansible_managed | comment }}
 
 [client]
 host = {{ item.login_host | default('localhost') }}
