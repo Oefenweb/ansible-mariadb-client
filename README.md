@@ -23,7 +23,7 @@ None
 * `mariadb_client_my_cnf_files.{n}.login_user`: [optional, default: `owner`]: The username used to authenticate with
 * `mariadb_client_my_cnf_files.{n}.login_password`: [required]: The password used to authenticate with
 
-* `mariadb_client_my_cnf_files.{n}.ssl`: [optional]: Whether or not to use SSL when connection (deprecated)
+* `mariadb_client_my_cnf_files.{n}.ssl`: [optional]: Whether to use SSL when connection (deprecated)
 * `mariadb_client_my_cnf_files.{n}.ssl_mode`: [optional]: Specifies the desired security state of the connection to the server (e.g. `VERIFY_CA`)
 
 * `mariadb_client_my_cnf_files.{n}.ssl_ca`: [optional, default: `ca-cert`]: The identifier of the ca certificate file in ssl map
